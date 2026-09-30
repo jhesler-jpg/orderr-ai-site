@@ -21,22 +21,26 @@
 <tr><th>Data</th><th>Purpose</th></tr>
 <tr><td>Your email address, and your password when you sign in</td><td>To sign you in. Your password is checked by our servers and is not stored on your device.</td></tr>
 <tr><td>Your account and role identifiers</td><td>To show the work, claims and approvals your role allows.</td></tr>
-<tr><td>Price-work bookings and claims (activity, quantity, date, status and values)</td><td>To record work and process approvals and payment runs.</td></tr>
+<tr><td>Your name, as recorded by your employer</td><td>To show who booked, raised or is assigned to work.</td></tr>
+<tr><td>Price-work bookings, claims and payments (activity, quantity, date, status, values and, where it applies, the tax deduction rate)</td><td>To record work and process approvals and payment runs.</td></tr>
 <tr><td>Snag records, including descriptions, notes, questions, replies and assignments</td><td>To manage defects and their fixes.</td></tr>
 <tr><td>Photos you take or choose for snags</td><td>Evidence for snags and fixes. Location metadata is removed when our servers process a photo, and is not kept.</td></tr>
+<tr><td>Sign-in records: the time of each sign-in, the network (IP) address recorded for the connection, and the app and system version your device reports (User-Agent)</td><td>To protect accounts and investigate misuse.</td></tr>
+<tr><td>A one-way hash of the email address used in recent sign-in attempts</td><td>To limit repeated failed sign-ins.</td></tr>
 </table>
 <p>Oai contains no advertising, advertising identifiers, analytics or tracking, and we do not sell personal data.</p>
 
 <h2>On your device</h2>
-<p>If you choose "Remember me", you stay signed in with an encrypted session credential held in your device's secure storage. Drafts and photos of unsent snags are stored encrypted on the device until they are sent or removed. None of this is included in device backups.</p>
+<p>If you choose "Remember me", you stay signed in with an encrypted session credential held in your device's secure storage. Drafts and photos of unsent snags are stored encrypted on the device until they are sent or removed. Photos are never included in device backups. On iOS, the session credential and drafts are kept in the Keychain as this-device-only items, which are never synced and cannot be restored to another device. On Android, none of this is included in backups.</p>
 
 <h2>Where data goes</h2>
-<p>Data is sent only over encrypted connections (HTTPS) to Oai's servers, which are hosted for us by service providers (Railway for the application and database, and Cloudflare R2 for photo storage). They process it only on our instructions.</p>
+<p>Data is sent only over encrypted connections (HTTPS) to Oai's servers, which are hosted for us by service providers (Railway for the application and database; Cloudflare R2 for photo storage and database backups; and GitHub, which runs our database backup job). They process it only on our instructions.</p>
 
 <h2>How long we keep data</h2>
 <ul>
-<li><strong>Signing in:</strong> with "Remember me", your session lasts up to 14 days; otherwise it lasts for the working day. Signing out ends it at once. Without "Remember me", the app also removes the session from your device when it goes into the background.</li>
-<li><strong>On your device:</strong> drafts and photos of unsent snags stay only until they are sent or removed.</li>
+<li><strong>Signing in:</strong> with "Remember me", your session lasts up to 14 days; otherwise it lasts up to 12 hours. Signing out removes the session from your device at once; our servers stop accepting it when it expires. Without "Remember me", the app also removes the session from your device when it goes into the background.</li>
+<li><strong>On your device:</strong> drafts and photos of unsent snags stay until they are sent or removed; signing out does not remove them.</li>
+<li><strong>Sign-in records:</strong> kept with your account records. Sign-in attempt hashes are deleted after about a day.</li>
 <li><strong>Work records:</strong> bookings, claims, approvals, payment runs and snags, with their photos, notes and history, are kept for as long as your employer uses Oai, because they form part of its work, quality and payment records. We have not set an automatic deletion period. A deleted snag is removed from view, but its record is kept; staff accounts that are no longer active are archived rather than erased.</li>
 <li>If you ask us to delete your data, we will tell you what we can delete and anything we need to keep, and why.</li>
 </ul>
